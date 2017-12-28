@@ -1,0 +1,53 @@
+#!/bin/bash
+# install
+
+function echo_err {
+    echo -e "\r\033[0;1m\033[41m FAIL \033[0m"
+}
+
+function echo_okay {
+    echo -e "\r\033[0;1m\033[42m DONE \033[0m"
+}
+
+function exists {
+    typ=$1
+    target=$2
+    echo_err
+    echo "$typ $target exists and is not already a symlink."
+    echo "Either remove or rename it and try again."
+}
+
+function symlink {
+    src=$1
+    target=$2
+
+    echo -n "       Linking $target..."
+
+    # Don't overwrite non-symlinked configs
+    if [ -f $target ] && [ ! -L $target ]; then
+        exists "file" $target
+        return 1
+    fi
+
+    # Don't nest symlinks
+    if [ -d $target ]; then
+        if [ -L $target ]; then
+            rm $target
+        else
+            exists "directory" $target
+            return 1
+        fi
+    fi
+
+    ln -fs $(pwd)/$src $target
+    echo_okay
+}
+
+symlink bashrc ~/.bashrc
+symlink bash_profile ~/.bash_profile
+symlink gitconfig ~/.gitconfig
+symlink gitignore ~/.gitignore_global
+symlink inputrc ~/.inputrc
+symlink lein ~/.lein
+symlink vimrc ~/.vimrc
+symlink vim ~/.vim

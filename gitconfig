@@ -1,0 +1,31 @@
+[user]
+    name = Daniel Liu
+    email = idaniel.liu@gmail.com
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
+[alias]
+    adda = "add -A"
+    amend = "commit --amend"
+    amenda = "commit -a --amend"
+    b = "branch"
+    bd = "branch -D"
+    bm = "branch -m"
+    bu = "branch --unset-upstream"
+    bv = "branch -vv"
+    bs = "branch --sort=committerdate"
+    co = "checkout"
+    cob = "checkout -b"
+    commita = "commit -am"
+    d = "diff"
+    files = "diff --name-only HEAD^..HEAD"
+    rbi = "rebase -i"
+    refs = "for-each-ref --format='%(authorname) %09 -%(refname)'"
+    lg = !"git lg1"
+    lg1 = !"git lg1-specific --all"
+    lg2 = !"git lg2-specific --all"
+    lg3 = !"git lg3-specific --all"
+    lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+    lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+    lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
+    stat = "show --stat --oneline"
