@@ -35,8 +35,10 @@ Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https:/
 
 call plug#end()
 
+let g:better_whitespace_enabled=1
 " Custom color scheme
 let ayucolor="dark"
 colorscheme ayu
 highlight ColorColumn guibg=#36A3D9  " Ruler color
+highlight ExtraWhitespace guibg=red  " Trailing whitespace color
 

@@ -19,6 +19,8 @@
     commita = "commit -am"
     d = "diff"
     files = "diff --name-only HEAD^..HEAD"
+    rba = "rebase --abort"
+    rbc = "rebase --continue"
     rbi = "rebase -i"
     refs = "for-each-ref --format='%(authorname) %09 -%(refname)'"
     lg = !"git lg1"

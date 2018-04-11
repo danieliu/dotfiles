@@ -12,11 +12,13 @@ $ ./install
 ## Other requirements
 
 * [homebrew](https://brew.sh/)
-    * `brew install vim --with-override-system-vi`
-    * `brew install git`
-    * neovim (if using Sublime Text + ActualVim)
-    * `brew install pyenv` 
+    * vim - `brew install vim --with-override-system-vi`
+        * `vim` then `:PlugInstall` for vim plugins
+    * git - `brew install git`
+    * neovim - `brew install neovim` (for Sublime Text + ActualVim, PyCharm)
+    * pyenv - `brew install pyenv`
         * `pyenv install {2.7.14, 3.6.4}` and `pyenv global 2.7.14 3.6.4`
+    * ripgrep - `brew install ripgrep`
 * [Sublime Text 3](https://www.sublimetext.com/)
 * [iTerm2](https://www.iterm2.com/)
     * Settings -> Preferences -> Load preferences from a custom folder or URL

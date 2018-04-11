@@ -90,7 +90,9 @@ fi
 # ----------------------------------------------------------------------
 
 alias grep='grep --color'
+alias rg='rg --type-add web:*.{html,css,scss,js,jsx} --smart-case --max-columns=200'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='rg --files'
 
 # git
 alias gitb='git branch'
