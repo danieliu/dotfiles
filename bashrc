@@ -92,7 +92,7 @@ fi
 # ----------------------------------------------------------------------
 
 alias grep='grep --color'
-alias rg='rg --type-add web:*.{html,css,scss,js,jsx} --smart-case --max-columns=200'
+alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=150'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='rg --files'
 
@@ -146,7 +146,7 @@ test -r "/usr/local/git/contrib/completion/git-prompt.sh" &&
 # ----------------------------------------------------------------------
 
 # we always pass these to ls(1)
-LS_COMMON="-hBG"
+LS_COMMON='-hBG'
 
 # if the dircolors utility is available, set that up to
 dircolors="$(type -P gdircolors dircolors | head -1)"
@@ -164,6 +164,6 @@ test -n "$LS_COMMON" &&
     alias ls="command ls $LS_COMMON"
 
 # these use the ls aliases above
-alias ll="ls -l"
-alias la="ls -al"
+alias ll='ls -l'
+alias la='ls -al'
 

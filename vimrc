@@ -12,7 +12,7 @@ Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https:/
 
 call plug#end()
 
-let ayucolor="dark"
+let ayucolor='dark'
 let g:better_whitespace_enabled=1
 
 syntax on
@@ -22,6 +22,7 @@ filetype plugin indent on
 
 set showcmd                       " Display incomplete commands
 set hlsearch                      " Highlight search matches
+set incsearch                     " Highlight matches while typing
 set ignorecase                    " Case insensitive if search is all lowercase
 set smartcase                     " Case sensitive if search has uppercase
 set laststatus=2                  " Display status line always
