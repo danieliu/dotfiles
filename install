@@ -25,15 +25,19 @@ function symlink {
 
     # Don't overwrite non-symlinked configs
     if [ -f $target ] && [ ! -L $target ]; then
+        # target exists, is regular file && not a symlink
         exists "file" $target
         return 1
     fi
 
     # Don't nest symlinks
     if [ -d $target ]; then
+        # target exists and is a directory
         if [ -L $target ]; then
+            # target exists and is a symlink
             rm $target
         else
+            # not a symlink
             exists "directory" $target
             return 1
         fi
@@ -47,7 +51,9 @@ symlink bashrc ~/.bashrc
 symlink bash_profile ~/.bash_profile
 symlink gitconfig ~/.gitconfig
 symlink gitignore ~/.gitignore_global
+symlink init.vim ~/.config/nvim/init.vim
 symlink inputrc ~/.inputrc
 symlink lein ~/.lein
 symlink vimrc ~/.vimrc
+symlink vimrc ~/.ideavimrc
 symlink vim ~/.vim
