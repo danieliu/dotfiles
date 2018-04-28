@@ -4,6 +4,7 @@ call plug#begin('~/.vim/bundle')
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 Plug 'ntpeters/vim-better-whitespace'   " Whitespace highlighting      | https://github.com/ntpeters/vim-better-whitespace
 Plug 'vim-airline/vim-airline'          " Status/tabline               | https://github.com/vim-airline/vim-airline
@@ -51,6 +52,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " Shorcuts
+nmap <leader>fe :Ex<CR>
 
 " Window splitting/navigation
 nmap <silent> <leader>s :split<CR>
@@ -63,5 +65,9 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 " FZF
-nmap <leader>t :FZF<CR>
+nmap <leader>t :Files<CR>
+let g:fzf_layout = { 'down': '~20%' }
+
+" Esc
+inoremap jk <Esc>
 
