@@ -1,6 +1,5 @@
-[user]
-    name = Daniel Liu
-    email = idaniel.liu@gmail.com
+[include]
+    path = ~/.gitconfig.local
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global

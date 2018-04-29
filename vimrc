@@ -38,6 +38,8 @@ set shiftwidth=4                  " Set tab size in spaces (auto indent)
 set termguicolors                 " Use 24-bit colors
 set colorcolumn=80,100            " Ruler at line numbers
 set backspace=indent,eol,start    " Allow backspace everywhere
+set splitbelow                    " Split under
+set splitright                    " Split right
 
 highlight ColorColumn guibg=#36A3D9  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
@@ -52,7 +54,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " Shorcuts
-nmap <leader>fe :Ex<CR>
+nmap <leader>o :Ex<CR>
 
 " Window splitting/navigation
 nmap <silent> <leader>s :split<CR>
@@ -66,7 +68,15 @@ nmap <C-l> <C-w>l
 
 " FZF
 nmap <leader>t :Files<CR>
+nmap <leader>f :Rg<CR>
 let g:fzf_layout = { 'down': '~20%' }
+" Use ripgrep
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 " Esc
 inoremap jk <Esc>
