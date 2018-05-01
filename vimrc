@@ -41,7 +41,7 @@ set backspace=indent,eol,start    " Allow backspace everywhere
 set splitbelow                    " Split under
 set splitright                    " Split right
 
-highlight ColorColumn guibg=#36A3D9  " Ruler color
+highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
 
 " Highlight tabs and trailing whitespace with dots
