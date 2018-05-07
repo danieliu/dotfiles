@@ -40,9 +40,12 @@ set colorcolumn=80,100            " Ruler at line numbers
 set backspace=indent,eol,start    " Allow backspace everywhere
 set splitbelow                    " Split under
 set splitright                    " Split right
+"set clipboard=unnamed             " Yank to clipboard
 
 highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
+
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " Highlight tabs and trailing whitespace with dots
 " set list listchars=tab:»·,trail:·
@@ -80,4 +83,7 @@ command! -bang -nargs=* Rg
 
 " Esc
 inoremap jk <Esc>
+
+" Strip whitespace
+nmap <silent> <leader>w :StripWhitespace<CR>
 

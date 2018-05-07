@@ -109,7 +109,7 @@ alias gits='git status'
 
 # npm
 alias npmls='npm list --depth=0 2>/dev/null'
-alias npmlsg='npml ist -g --depth=0 2>/dev/null'
+alias npmlsg='npm list -g --depth=0 2>/dev/null'
 alias npmlsd='npm list --dev --depth=0 2>/dev/null'
 
 # etc
