@@ -1887,8 +1887,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-28T03:45:48Z</date>
+	<date>2018-04-29T15:57:50Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.20734174679487183</real>

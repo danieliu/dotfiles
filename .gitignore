@@ -1,4 +1,6 @@
 .DS_Store
 vim/.netrwhist
 vim/bundle
+lein/repl-history
+lein/self-installs
 
