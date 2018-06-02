@@ -94,6 +94,11 @@ fi
 alias grep='grep --color'
 alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=150'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+fzfo() {
+    local file
+    file=$(fzf)
+    [[ -n "$file" ]] && vim "$file"
+}
 export FZF_DEFAULT_COMMAND='rg --files'
 
 # git
@@ -167,3 +172,5 @@ test -n "$LS_COMMON" &&
 alias ll='ls -l'
 alias la='ls -al'
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
