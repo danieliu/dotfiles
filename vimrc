@@ -10,11 +10,13 @@ Plug 'ntpeters/vim-better-whitespace'   " Whitespace highlighting      | https:/
 Plug 'vim-airline/vim-airline'          " Status/tabline               | https://github.com/vim-airline/vim-airline
 Plug 'tpope/vim-surround'               " Quoting/parenthesizing       | https://github.com/tpope/vim-surround
 Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https://github.com/ayu-theme/ayu-vim
+Plug 'vim-python/python-syntax'
 
 call plug#end()
 
 let ayucolor='dark'
 let g:better_whitespace_enabled=1
+let g:python_highlight_all=1
 
 syntax on
 colorscheme ayu

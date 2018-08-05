@@ -1082,20 +1082,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>929 110 445 103 0 0 1440 878 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>479 473 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 373 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>41 319 796 473 0 0 1440 878 </string>
+	<string>29 363 1016 512 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>710 59 730 819 0 0 1440 878 </string>
+	<string>710 45 730 825 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>710 51 730 819 0 0 1440 878 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>197 53 730 825 0 0 1440 878 </string>
+	<string>709 53 730 825 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_A0D01307-1AB4-46D8-B4F4-BE48C4A3853C</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_A0D01307-1AB4-46D8-B4F4-BE48C4A3853C_selection</key>
@@ -1505,6 +1499,13 @@
 					<key>Text</key>
 					<string>0x7f</string>
 				</dict>
+				<key>0x61-0x100000</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Text</key>
+					<string></string>
+				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
 					<key>Action</key>
@@ -1806,7 +1807,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.056428458121827417</real>
+			<real>0.024520145939086295</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -1829,20 +1830,14 @@
 			<string>/Users/danielliu</string>
 		</dict>
 	</array>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
-	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>D0693F03-5388-4AF8-AA77-C305CC35AB42</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<string>190D74E6-FC30-4940-BB73-F89EDBDCE4A2</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>500694525.40887398</real>
+	<real>532769959.77299899</real>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1877,17 +1872,17 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/danielliu/.dotfiles/iterm2</string>
+	<string>/Users/dliu/dotfiles/iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=71</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=59</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-29T15:57:50Z</date>
+	<date>2018-08-04T15:54:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1896,10 +1891,12 @@
 	<real>0.20734174679487183</real>
 	<key>TabStyle</key>
 	<integer>1</integer>
+	<key>WordCharacters</key>
+	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.7</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>
