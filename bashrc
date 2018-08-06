@@ -99,7 +99,7 @@ fzfo() {
     file=$(fzf)
     [[ -n "$file" ]] && vim "$file"
 }
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules"'
 
 # git
 alias gitb='git branch'

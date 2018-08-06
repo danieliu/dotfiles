@@ -48,6 +48,7 @@ highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufRead *.sls set syntax=yaml
 
 " Highlight tabs and trailing whitespace with dots
 " set list listchars=tab:»·,trail:·
