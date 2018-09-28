@@ -11,6 +11,14 @@ Plug 'vim-airline/vim-airline'          " Status/tabline               | https:/
 Plug 'tpope/vim-surround'               " Quoting/parenthesizing       | https://github.com/tpope/vim-surround
 Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https://github.com/ayu-theme/ayu-vim
 Plug 'vim-python/python-syntax'
+Plug 'plasticboy/vim-markdown'
+Plug 'elzr/vim-json'
+
+" clj
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-fireplace'
 
 call plug#end()
 
@@ -50,6 +58,8 @@ highlight ExtraWhitespace guibg=red  " Trailing whitespace color
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead *.sls set syntax=yaml
 
+let g:vim_json_syntax_conceal = 0
+
 " Highlight tabs and trailing whitespace with dots
 " set list listchars=tab:»·,trail:·
 
@@ -72,6 +82,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Equal window size
+nmap <silent> <leader>w= :wincmd =<CR>
+
 " FZF
 nmap <leader>t :Files<CR>
 nmap <leader>f :Rg<CR>
@@ -88,5 +101,5 @@ command! -bang -nargs=* Rg
 inoremap jk <Esc>
 
 " Strip whitespace
-nmap <silent> <leader>w :StripWhitespace<CR>
+nmap <silent> <leader>wt :StripWhitespace<CR>
 
