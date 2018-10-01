@@ -30,6 +30,7 @@
     refs = "for-each-ref --format='%(authorname) %09 -%(refname)'"
     sa = "!git stash apply stash@{${1:-0}} #"
     sd = "!git stash drop stash@{${1:-0}} #"
+    sv = "!git stash show stash@{${1:-0}} -v #"
     sl = "stash list"
     sp = "!git stash pop stash@{$1} #"
     ss = "stash save"

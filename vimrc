@@ -9,8 +9,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'   " Whitespace highlighting      | https://github.com/ntpeters/vim-better-whitespace
 Plug 'vim-airline/vim-airline'          " Status/tabline               | https://github.com/vim-airline/vim-airline
 Plug 'tpope/vim-surround'               " Quoting/parenthesizing       | https://github.com/tpope/vim-surround
+Plug 'tpope/vim-fugitive'               " Git things                   | https://github.com/tpope/vim-fugitive
 Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https://github.com/ayu-theme/ayu-vim
-Plug 'vim-python/python-syntax'
+Plug 'vim-python/python-syntax'         " Python syntax highlighting   | https://github.com/vim-python/python-syntax
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 
@@ -84,6 +85,11 @@ nmap <C-l> <C-w>l
 
 " Equal window size
 nmap <silent> <leader>w= :wincmd =<CR>
+
+" fugitive
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gb :Gblame<CR>
 
 " FZF
 nmap <leader>t :Files<CR>
