@@ -52,17 +52,18 @@ set backspace=indent,eol,start    " Allow backspace everywhere
 set splitbelow                    " Split under
 set splitright                    " Split right
 "set clipboard=unnamed             " Yank to clipboard
+set list                          " show listchars
+set listchars=tab:»·,space:·      " show spaces as .
 
 highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType go setlocal noexpandtab
 autocmd BufNewFile,BufRead *.sls set syntax=yaml
+autocmd BufNewFile,BufRead *.arc* set syntax=json
 
 let g:vim_json_syntax_conceal = 0
-
-" Highlight tabs and trailing whitespace with dots
-" set list listchars=tab:»·,trail:·
 
 let mapleader=','
 
@@ -77,6 +78,7 @@ nmap <leader>o :Ex<CR>
 nmap <silent> <leader>s :split<CR>
 nmap <silent> <leader>v :vsplit<CR>
 nmap <silent> <leader>c :close<CR>
+nmap <silent> <leader>n :vnew<CR>
 
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
