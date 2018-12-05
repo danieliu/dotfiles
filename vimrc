@@ -21,6 +21,8 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-fireplace'
 
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 let ayucolor='dark'
