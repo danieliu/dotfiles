@@ -119,7 +119,7 @@ alias npmlsd='npm list --dev --depth=0 2>/dev/null'
 
 # etc
 alias bprofile='$EDITOR $HOME/.bash_profile.local'
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="tmux -2"
 
 # ----------------------------------------------------------------------
 # BASH COMPLETION
