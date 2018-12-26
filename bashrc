@@ -35,6 +35,7 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=
 HISTSIZE=
 HISTTIMEFORMAT="%F %T: "
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # ----------------------------------------------------------------------
 # PATH
@@ -92,7 +93,7 @@ fi
 # ----------------------------------------------------------------------
 
 alias grep='grep --color'
-alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=150'
+alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=1000'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fzfo() {
     local file

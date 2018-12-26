@@ -64,6 +64,7 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType go setlocal noexpandtab
 autocmd BufNewFile,BufRead *.sls set syntax=yaml
 autocmd BufNewFile,BufRead *.arc* set syntax=json
+autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 
 let g:vim_json_syntax_conceal = 0
 
