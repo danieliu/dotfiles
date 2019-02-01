@@ -118,6 +118,9 @@ alias npmls='npm list --depth=0 2>/dev/null'
 alias npmlsg='npm list -g --depth=0 2>/dev/null'
 alias npmlsd='npm list --dev --depth=0 2>/dev/null'
 
+# pip
+alias pipuninstall='pip freeze | grep -v "^-e" | xargs pip uninstall -y'
+
 # etc
 alias bprofile='$EDITOR $HOME/.bash_profile.local'
 alias tmux="tmux -2"

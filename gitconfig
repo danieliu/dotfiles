@@ -27,6 +27,7 @@
     rba = "rebase --abort"
     rbc = "rebase --continue"
     rbi = "rebase -i"
+    rbiom = "rebase -i origin/master"
     rh = "reset HEAD^"
     rhh = "reset HEAD^ --hard"
     rpo = "remote prune origin"
