@@ -14,6 +14,8 @@ Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https:/
 Plug 'vim-python/python-syntax'         " Python syntax highlighting   | https://github.com/vim-python/python-syntax
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
+Plug 'w0rp/ale'
+
 
 " clj
 Plug 'guns/vim-clojure-static'
@@ -28,6 +30,13 @@ call plug#end()
 let ayucolor='dark'
 let g:better_whitespace_enabled=1
 let g:python_highlight_all=1
+
+" ALE options
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] (%severity%) %code%: %s'
 
 syntax on
 colorscheme ayu
@@ -114,3 +123,6 @@ inoremap jk <Esc>
 " Strip whitespace
 nmap <silent> <leader>wt :StripWhitespace<CR>
 
+" ALE
+nmap <silent> <leader>b <Plug>(ale_previous_wrap)
+nmap <silent> <leader>d <Plug>(ale_next_wrap)
