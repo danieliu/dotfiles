@@ -10,6 +10,7 @@ Plug 'ntpeters/vim-better-whitespace'   " Whitespace highlighting      | https:/
 Plug 'vim-airline/vim-airline'          " Status/tabline               | https://github.com/vim-airline/vim-airline
 Plug 'tpope/vim-surround'               " Quoting/parenthesizing       | https://github.com/tpope/vim-surround
 Plug 'tpope/vim-fugitive'               " Git things                   | https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-repeat'                 " dot commands for plugins     | https;//github.com/tpop/vim-repeat
 Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https://github.com/ayu-theme/ayu-vim
 Plug 'vim-python/python-syntax'         " Python syntax highlighting   | https://github.com/vim-python/python-syntax
 Plug 'plasticboy/vim-markdown'
@@ -65,6 +66,7 @@ set splitright                    " Split right
 "set clipboard=unnamed             " Yank to clipboard
 set list                          " show listchars
 set listchars=tab:»·,space:·      " show spaces as .
+set tags=tags
 
 highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
