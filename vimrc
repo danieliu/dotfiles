@@ -16,7 +16,8 @@ Plug 'vim-python/python-syntax'         " Python syntax highlighting   | https:/
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'w0rp/ale'
-
+Plug 'mitsuhiko/vim-jinja'              " jinja syntax                 | https://github.com/mitsuhiko/vim-jinja
+Plug 'python/black'                     " Python formatting            | https://github.com/python/black
 
 " clj
 Plug 'guns/vim-clojure-static'
@@ -31,6 +32,8 @@ call plug#end()
 let ayucolor='dark'
 let g:better_whitespace_enabled=1
 let g:python_highlight_all=1
+
+let g:airline#extensions#tabline#enabled = 1
 
 " ALE options
 let g:ale_lint_on_text_changed = 'never'
@@ -67,6 +70,8 @@ set splitright                    " Split right
 set list                          " show listchars
 set listchars=tab:»·,space:·      " show spaces as .
 set tags=tags
+set timeoutlen=1000
+set ttimeoutlen=10
 
 highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
@@ -78,6 +83,10 @@ autocmd BufNewFile,BufRead *.arc* set syntax=json
 autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 
 let g:vim_json_syntax_conceal = 0
+
+" airline
+let g:airline#extensions#branch#enabled = 0
+" let g:airline#extensions#branch#displayed_head_limit = 10
 
 let mapleader=','
 

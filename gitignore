@@ -4,3 +4,5 @@
 *.py-e
 cover/
 tags
+yalc.lock
+.yalc
