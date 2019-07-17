@@ -36,11 +36,14 @@ let g:python_highlight_all=1
 let g:airline#extensions#tabline#enabled = 1
 
 " ALE options
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] (%severity%) %code%: %s'
+let g:ale_lint_on_text_changed='never'
+let g:ale_lint_on_enter=0
+let g:ale_echo_msg_error_str='E'
+let g:ale_echo_msg_warning_str='W'
+let g:ale_echo_msg_format='[%linter%] (%severity%) %code%: %s'
+
+" airline
+let g:airline#extensions#tabline#enabled=1
 
 syntax on
 colorscheme ayu
@@ -62,7 +65,7 @@ set shiftwidth=4                  " Set tab size in spaces (auto indent)
 "set cursorline                   " Highlight current line
 "set cursorcolumn                 " Highlight current column
 set termguicolors                 " Use 24-bit colors
-set colorcolumn=80,100            " Ruler at line numbers
+set colorcolumn=80,88,100         " Ruler at line numbers
 set backspace=indent,eol,start    " Allow backspace everywhere
 set splitbelow                    " Split under
 set splitright                    " Split right
