@@ -3,4 +3,4 @@ vim/.netrwhist
 vim/bundle
 lein/repl-history
 lein/self-installs
-
+vim/black

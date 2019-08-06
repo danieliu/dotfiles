@@ -100,16 +100,13 @@ fzfo() {
     file=$(fzf)
     [[ -n "$file" ]] && vim "$file"
 }
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules"'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules" --glob "!.yalc"'
 
 # git
 alias gitb='git branch'
-alias gitco='git checkout'
-alias gitcob='git checkout -b'
 alias gitd='git diff'
 alias gitf='git fetch'
 alias gitl='git log'
-alias gitmf='git merge --ff-only'
 alias gitp='git pull'
 alias gits='git status'
 

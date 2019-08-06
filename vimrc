@@ -6,18 +6,13 @@ call plug#begin('~/.vim/bundle')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'ntpeters/vim-better-whitespace'   " Whitespace highlighting      | https://github.com/ntpeters/vim-better-whitespace
-Plug 'vim-airline/vim-airline'          " Status/tabline               | https://github.com/vim-airline/vim-airline
-Plug 'tpope/vim-surround'               " Quoting/parenthesizing       | https://github.com/tpope/vim-surround
-Plug 'tpope/vim-fugitive'               " Git things                   | https://github.com/tpope/vim-fugitive
-Plug 'tpope/vim-repeat'                 " dot commands for plugins     | https;//github.com/tpop/vim-repeat
-Plug 'ayu-theme/ayu-vim'                " Ayu color theme              | https://github.com/ayu-theme/ayu-vim
-Plug 'vim-python/python-syntax'         " Python syntax highlighting   | https://github.com/vim-python/python-syntax
-Plug 'plasticboy/vim-markdown'
-Plug 'elzr/vim-json'
-Plug 'w0rp/ale'
-Plug 'mitsuhiko/vim-jinja'              " jinja syntax                 | https://github.com/mitsuhiko/vim-jinja
-Plug 'python/black'                     " Python formatting            | https://github.com/python/black
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'ntpeters/vim-better-whitespace'   " whitespace highlighting
+Plug 'vim-airline/vim-airline'          " status/tabline
+Plug 'tpope/vim-surround'               " quoting/parenthesizing
+Plug 'tpope/vim-fugitive'               " git things
+Plug 'tpope/vim-repeat'                 " dot commands for plugins
+Plug 'dense-analysis/ale'               " async lint
 
 " clj
 Plug 'guns/vim-clojure-static'
@@ -25,13 +20,26 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-fireplace'
 
-Plug 'christoomey/vim-tmux-navigator'
+" lang/syntax
+Plug 'vim-python/python-syntax'
+Plug 'plasticboy/vim-markdown'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'elzr/vim-json'
+Plug 'othree/yajs'
+Plug 'mxw/vim-jsx'
+
+Plug 'psf/black'
+
+" theme
+Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 let ayucolor='dark'
 let g:better_whitespace_enabled=1
 let g:python_highlight_all=1
+let g:gruvbox_contrast_dark='hard'
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -41,6 +49,9 @@ let g:ale_lint_on_enter=0
 let g:ale_echo_msg_error_str='E'
 let g:ale_echo_msg_warning_str='W'
 let g:ale_echo_msg_format='[%linter%] (%severity%) %code%: %s'
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 " airline
 let g:airline#extensions#tabline#enabled=1
@@ -85,7 +96,7 @@ autocmd BufNewFile,BufRead *.sls set syntax=yaml
 autocmd BufNewFile,BufRead *.arc* set syntax=json
 autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 
-let g:vim_json_syntax_conceal = 0
+let g:vim_json_syntax_conceal=0
 
 " airline
 let g:airline#extensions#branch#enabled = 0
