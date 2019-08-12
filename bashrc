@@ -121,6 +121,9 @@ alias pipuninstall='pip freeze | grep -v "^-e" | xargs pip uninstall -y'
 # etc
 alias bprofile='$EDITOR $HOME/.bash_profile.local'
 alias tmux="tmux -2"
+alias tls="tmux ls"
+alias tma="tmux a -t"
+alias tmn="tmux new -s"
 
 # ----------------------------------------------------------------------
 # BASH COMPLETION

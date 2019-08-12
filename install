@@ -58,3 +58,4 @@ symlink vimrc ~/.vimrc
 symlink vimrc ~/.ideavimrc
 symlink vim ~/.vim
 symlink tmux.conf ~/.tmux.conf
+symlink ctags ~/.ctags
