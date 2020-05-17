@@ -13,6 +13,7 @@ Plug 'tpope/vim-surround'               " quoting/parenthesizing
 Plug 'tpope/vim-fugitive'               " git things
 Plug 'tpope/vim-repeat'                 " dot commands for plugins
 Plug 'dense-analysis/ale'               " async lint
+Plug 'junegunn/vim-easy-align'
 
 " clj
 Plug 'guns/vim-clojure-static'
@@ -27,8 +28,9 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'elzr/vim-json'
 Plug 'othree/yajs'
 Plug 'mxw/vim-jsx'
+Plug 'keith/swift.vim'
 
-Plug 'psf/black'
+Plug 'psf/black', { 'for': 'python' }
 
 " theme
 Plug 'ayu-theme/ayu-vim'
@@ -86,6 +88,7 @@ set listchars=tab:»·,space:·      " show spaces as .
 set tags=tags
 set timeoutlen=1000
 set ttimeoutlen=10
+set directory=$HOME/.vimswap//
 
 highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color

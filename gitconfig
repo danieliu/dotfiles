@@ -47,7 +47,7 @@
     stat = "show --stat --oneline"
     l = "log"
     lk = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s' --date=relative"
-    lj = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(12)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s'"
+    lj = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(30)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s'"
     lg = "!git lg1"
     lg1 = "!git lg1-specific --all"
     lg2 = "!git lg2-specific --all"
@@ -57,3 +57,5 @@
     lg3-specific = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'"
     lgl = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --branches"
     tags = "log --date-order --tags --simplify-by-decoration --pretty='format:%C(green)%ai %C(red)%h %C(auto)%D' --date=short"
+[pager]
+	branch = false
