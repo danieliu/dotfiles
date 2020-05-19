@@ -48,6 +48,7 @@ function symlink {
 }
 
 symlink bashrc ~/.bashrc
+symlink zshrc ~/.zshrc
 symlink bash_profile ~/.bash_profile
 symlink gitconfig ~/.gitconfig
 symlink gitignore ~/.gitignore_global
