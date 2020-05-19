@@ -5,6 +5,7 @@ call plug#begin('~/.vim/bundle')
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ntpeters/vim-better-whitespace'   " whitespace highlighting
@@ -60,7 +61,6 @@ let g:airline#extensions#tabline#enabled=1
 
 syntax on
 colorscheme ayu
-" colorscheme desert
 filetype plugin indent on
 
 set showcmd                       " Display incomplete commands
@@ -75,14 +75,11 @@ set scrolloff=3                   " Show number of lines around cursor at top/bo
 set expandtab                     " Convert tabs to spaces
 set tabstop=4                     " Set tab size in spaces (manual indent)
 set shiftwidth=4                  " Set tab size in spaces (auto indent)
-"set cursorline                   " Highlight current line
-"set cursorcolumn                 " Highlight current column
 set termguicolors                 " Use 24-bit colors
 set colorcolumn=80,88,100         " Ruler at line numbers
 set backspace=indent,eol,start    " Allow backspace everywhere
 set splitbelow                    " Split under
 set splitright                    " Split right
-"set clipboard=unnamed             " Yank to clipboard
 set list                          " show listchars
 set listchars=tab:»·,space:·      " show spaces as .
 set tags=tags
@@ -103,7 +100,6 @@ let g:vim_json_syntax_conceal=0
 
 " airline
 let g:airline#extensions#branch#enabled = 0
-" let g:airline#extensions#branch#displayed_head_limit = 10
 
 let mapleader=','
 
@@ -113,6 +109,10 @@ nnoremap <C-y> 3<C-y>
 
 " Shorcuts
 nmap <leader>o :Ex<CR>
+
+" coc
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gr <Plug>(coc-references)
 
 " Window splitting/navigation
 nmap <silent> <leader>s :split<CR>
@@ -130,7 +130,6 @@ nmap <silent> <leader>w= :wincmd =<CR>
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
 
 " FZF
