@@ -2,6 +2,7 @@
 export ZSH="/Users/dliu/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
+DISABLE_MAGIC_FUNCTIONS=true
 
 # COMPLETION_WAITING_DOTS="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -72,6 +73,7 @@ setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 setopt IGNORE_EOF
 # setopt INC_APPEND_HISTORY
+unsetopt INC_APPEND_HISTORY
 setopt APPEND_HISTORY
 setopt NO_CASE_GLOB
 
@@ -83,7 +85,14 @@ HYPHEN_INSENSITIVE="true"
 
 autoload bashcompinit && bashcompinit
 
-# PROMPT=""
+NEWLINE=$'\n'
+PROMPT='%{$fg[blue]%}[%*]%{$reset_color%} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)$NEWLINE'
+PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$reset_color%} "
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 # load local configs
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

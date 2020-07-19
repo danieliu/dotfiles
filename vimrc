@@ -99,7 +99,10 @@ autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 let g:vim_json_syntax_conceal=0
 
 " airline
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#branch#enabled=0
+
+" vim-markdown
+let g:vim_markdown_folding_level=3
 
 let mapleader=','
 

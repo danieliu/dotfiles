@@ -59,4 +59,3 @@
     tags = "log --date-order --tags --simplify-by-decoration --pretty='format:%C(green)%ai %C(red)%h %C(auto)%D' --date=short"
 [pager]
     branch = false
-    diff = false
