@@ -10,6 +10,7 @@
     amend = "commit --amend"
     amenda = "commit -a --amend"
     b = "branch"
+    br = "branch -r"
     bd = "branch -D"
     bm = "branch -m"
     bs = "branch --sort=committerdate"
@@ -48,6 +49,8 @@
     l = "log"
     lk = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s' --date=relative"
     lj = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(30)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s'"
+    lm = "!git log --author=\"<$(git config user.email)>\""
+    lp = "log -p"
     lg = "!git lg1"
     lg1 = "!git lg1-specific --all"
     lg2 = "!git lg2-specific --all"
@@ -59,3 +62,6 @@
     tags = "log --date-order --tags --simplify-by-decoration --pretty='format:%C(green)%ai %C(red)%h %C(auto)%D' --date=short"
 [pager]
     branch = false
+    stash = false
+[pull]
+    rebase = false

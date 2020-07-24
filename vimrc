@@ -59,6 +59,9 @@ let g:ale_linters = {
 " airline
 let g:airline#extensions#tabline#enabled=1
 
+" black
+let g:black_skip_string_normalization=1
+
 syntax on
 colorscheme ayu
 filetype plugin indent on
@@ -95,6 +98,7 @@ autocmd FileType go setlocal noexpandtab
 autocmd BufNewFile,BufRead *.sls set syntax=yaml
 autocmd BufNewFile,BufRead *.arc* set syntax=json
 autocmd BufNewFile,BufRead *.coffee set syntax=javascript
+autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy
 
 let g:vim_json_syntax_conceal=0
 

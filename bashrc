@@ -93,14 +93,14 @@ fi
 # ----------------------------------------------------------------------
 
 alias grep='grep --color'
-alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=1000'
+alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=20000'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fzfo() {
     local file
     file=$(fzf)
     [[ -n "$file" ]] && vim "$file"
 }
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules" --glob "!.yalc"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules" --glob "!.yalc" --glob "!*.pyc"'
 
 # git
 alias gitb='git branch'
