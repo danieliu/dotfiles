@@ -1,0 +1,15 @@
+{
+  "languageserver": {
+    "clojure-lsp": {
+      "command": "/Users/dliu/.config/coc/languageservers/clojure-lsp",
+      "args": [],
+      "filetypes": ["clojure"],
+      "rootPatterns": ["project.clj"],
+      "additionalSchemes": ["jar", "zipfile"],
+      "trace.server": "verbose",
+      "initializationOptions": {
+        "ignore-classpath-directories": true
+      }
+    }
+  }
+}

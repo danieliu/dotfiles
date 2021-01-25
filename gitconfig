@@ -14,6 +14,7 @@
     bd = "branch -D"
     bm = "branch -m"
     bs = "branch --sort=committerdate"
+    bp = "branch -u"
     bu = "branch --unset-upstream"
     bv = "branch -vv"
     cam = "commit -am"
@@ -72,3 +73,5 @@
     rebase = false
 [init]
     defaultBranch = master
+[merge]
+	tool = vimdiff

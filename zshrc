@@ -21,6 +21,7 @@ export EDITOR='vim'
 # export ARCHFLAGS="-arch x86_64"
 
 alias zshconf="vim ~/.zshrc"
+alias zshhist="vim ~/.zsh_history"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshlocal='$EDITOR $HOME/.zshrc.local'
 
@@ -37,6 +38,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*" --glob
 # git
 alias gitb='git branch'
 alias gitd='git diff'
+alias gitds='git diff --staged'
 alias gitf='git fetch'
 alias gitl='git log'
 alias gitp='git pull'
@@ -48,8 +50,10 @@ alias npmls='npm list --depth=0 2>/dev/null'
 alias npmlsg='npm list -g --depth=0 2>/dev/null'
 alias npmlsd='npm list --dev --depth=0 2>/dev/null'
 
-# pip
+# python, pip
 alias pipuninstall='pip freeze | grep -v "^-e" | xargs pip uninstall -y'
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias da='deactivate'
 
 # tmux
 alias tmi='. $HOME/dotfiles/tmux/tmux-init.sh'
@@ -64,10 +68,6 @@ alias dcls="docker container ls -aq"
 dstop() {
     docker stop `docker ps -q`
 }
-
-# venv
-alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
-alias da='deactivate'
 
 # cd
 alias cdc='cd $HOME/code'
