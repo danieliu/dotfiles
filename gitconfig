@@ -26,9 +26,13 @@
     cpa = "cherry-pick --abort"
     cpc = "cherry-pick --continue"
     d = "diff"
+    ds = "diff --staged"
     files = "diff --name-only HEAD^..HEAD"
+    ftf = "fetch --tags --force"
     mf = "merge --ff-only"
     puo = "push -u origin"
+    prbiom = "pull --rebase=interactive origin/master"
+    prbiod = "pull --rebase=interactive origin/develop"
     rba = "rebase --abort"
     rbc = "rebase --continue"
     rbi = "rebase -i"
@@ -51,6 +55,7 @@
     lj = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(30)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s'"
     lm = "!git log --author=\"<$(git config user.email)>\""
     lp = "log -p"
+    ls = "log --stat"
     lg = "!git lg1"
     lg1 = "!git lg1-specific --all"
     lg2 = "!git lg2-specific --all"
@@ -65,3 +70,5 @@
     stash = false
 [pull]
     rebase = false
+[init]
+    defaultBranch = master

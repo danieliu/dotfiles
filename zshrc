@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/Users/dliu/.oh-my-zsh"
 
@@ -23,14 +25,14 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshlocal='$EDITOR $HOME/.zshrc.local'
 
 alias grep='grep --color'
-alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=1000'
+alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=10000'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fzfo() {
     local file
     file=$(fzf)
     [[ -n "$file" ]] && vim "$file"
 }
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules" --glob "!.yalc"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules" --glob "!.yalc"'
 
 # git
 alias gitb='git branch'
@@ -39,6 +41,7 @@ alias gitf='git fetch'
 alias gitl='git log'
 alias gitp='git pull'
 alias gits='git status'
+alias gitup='git pull && git rpo && git prune'
 
 # npm
 alias npmls='npm list --depth=0 2>/dev/null'
@@ -49,13 +52,26 @@ alias npmlsd='npm list --dev --depth=0 2>/dev/null'
 alias pipuninstall='pip freeze | grep -v "^-e" | xargs pip uninstall -y'
 
 # tmux
+alias tmi='. $HOME/dotfiles/tmux/tmux-init.sh'
 alias tmux="tmux -2"
 alias tls="tmux ls"
 alias tma="tmux a -t"
 alias tmn="tmux new -s"
 
+# docker
+alias dps="docker ps"
+alias dcls="docker container ls -aq"
+dstop() {
+    docker stop `docker ps -q`
+}
+
+# venv
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias da='deactivate'
+
 # cd
 alias cdc='cd $HOME/code'
+alias cddf='cd $HOME/dotfiles'
 alias cdgo='cd $GOPATH/src'
 alias sshconf='$EDITOR $HOME/.ssh/config'
 alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
@@ -77,6 +93,8 @@ unsetopt INC_APPEND_HISTORY
 setopt APPEND_HISTORY
 setopt NO_CASE_GLOB
 
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=10000000
 SAVEHIST=$HISTSIZE
@@ -96,3 +114,5 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 # load local configs
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# zprof
