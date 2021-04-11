@@ -23,7 +23,9 @@ export EDITOR='vim'
 alias zshconf="vim ~/.zshrc"
 alias zshhist="vim ~/.zsh_history"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias zshlocal='$EDITOR $HOME/.zshrc.local'
+alias zshlocal="vim $HOME/.zshrc.local"
+alias vimrc="vim $HOME/.vimrc"
+alias gitconf="vim $HOME/.gitconfig"
 
 alias grep='grep --color'
 alias rg='rg --type-add "web:*.{html,css,scss,js,jsx}" --smart-case --max-columns=10000'
@@ -54,6 +56,8 @@ alias npmlsd='npm list --dev --depth=0 2>/dev/null'
 alias pipuninstall='pip freeze | grep -v "^-e" | xargs pip uninstall -y'
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias da='deactivate'
+alias venv3='virtualenv --python=`which python3` .venv3'
+alias venv2='virtualenv --python=`which python2` .venv2'
 
 # tmux
 alias tmi='. $HOME/dotfiles/tmux/tmux-init.sh'
@@ -64,7 +68,14 @@ alias tmn="tmux new -s"
 
 # docker
 alias dps="docker ps"
-alias dcls="docker container ls -aq"
+alias di="docker inspect"
+alias dco="docker-compose"
+alias dcoup="docker-compose up -d"
+alias dcostop="docker-compose stop"
+alias dcops="docker-compose ps"
+alias dcodown="docker-compose down"
+alias dils="docker image ls"
+alias dcls="docker container ls"
 dstop() {
     docker stop `docker ps -q`
 }
@@ -73,7 +84,7 @@ dstop() {
 alias cdc='cd $HOME/code'
 alias cddf='cd $HOME/dotfiles'
 alias cdgo='cd $GOPATH/src'
-alias sshconf='$EDITOR $HOME/.ssh/config'
+alias sshconf='vim $HOME/.ssh/config'
 alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 
@@ -104,7 +115,7 @@ HYPHEN_INSENSITIVE="true"
 autoload bashcompinit && bashcompinit
 
 NEWLINE=$'\n'
-PROMPT='%{$fg[blue]%}[%*]%{$reset_color%} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)$NEWLINE'
+PROMPT='%{$fg[blue]%}[%*]%{$reset_color%} %{$fg_bold[cyan]%}%~%{$reset_color%} $(git_prompt_info)$NEWLINE'
 PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"

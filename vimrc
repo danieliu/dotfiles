@@ -60,10 +60,10 @@ let g:ale_linters = {
 let g:airline#extensions#tabline#enabled=1
 
 " black
-let g:black_skip_string_normalization=1
+let g:black_skip_string_normalization=0
 
 syntax on
-colorscheme ayu
+colorscheme gruvbox
 filetype plugin indent on
 
 set showcmd                       " Display incomplete commands
@@ -89,6 +89,7 @@ set tags=tags
 set timeoutlen=1000
 set ttimeoutlen=10
 set directory=$HOME/.vimswap//
+set cursorline
 
 highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
@@ -107,6 +108,7 @@ let g:airline#extensions#branch#enabled=0
 
 " vim-markdown
 let g:vim_markdown_folding_level=3
+let g:vim_markdown_folding_disabled=1
 
 let mapleader=','
 
@@ -137,7 +139,7 @@ nmap <silent> <leader>w= :wincmd =<CR>
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gb :Git blame<CR>
 
 " FZF
 nmap <leader>t :Files<CR>
