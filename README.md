@@ -13,12 +13,14 @@ $ ./install
 
 * [homebrew](https://brew.sh/)
     * pyenv - `brew install pyenv`
-        * `pyenv install {2.7.14, 3.6.4}` and `pyenv global 2.7.14 3.6.4 system`
+        * e.g. `pyenv install {2.7.14, 3.6.4}` and `pyenv global 2.7.14 3.6.4 system`
     * git - `brew install git`
     * vim - `brew install vim --with-override-system-vi`
         * `vim` then `:PlugInstall` for vim plugins
     * neovim - `brew install neovim` (for Sublime Text + ActualVim, PyCharm)
     * ripgrep - `brew install ripgrep`
+    * less - `brew install less` (latest `less` for git-delta)
+    * [git-delta](https://github.com/dandavison/delta) - `brew install git-delta`
 * [Sublime Text 3](https://www.sublimetext.com/)
 * [Leiningen (Clojure)](https://leiningen.org/) - `brew install leiningen`
     * [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)

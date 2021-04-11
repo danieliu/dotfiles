@@ -2,7 +2,15 @@
     path = ~/.gitconfig.local
 [core]
     editor = vim
+    pager = delta
     excludesfile = ~/.gitignore_global
+[delta]
+    file-modified-label = modified:
+    hunk-header-style = omit
+    line-numbers = true
+    paging = always
+    side-by-side = true
+    syntax-theme = gruvbox-dark
 [alias]
     adda = "add -A"
     addu = "add -u"
