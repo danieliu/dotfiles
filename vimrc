@@ -100,6 +100,7 @@ autocmd BufNewFile,BufRead *.sls set syntax=yaml
 autocmd BufNewFile,BufRead *.arc* set syntax=json
 autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy
+autocmd BufNewFile,BufRead *.toml set syntax=cfg
 
 let g:vim_json_syntax_conceal=0
 
@@ -115,6 +116,8 @@ let mapleader=','
 " QoL
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+nnoremap n nzz
+nnoremap N Nzz
 
 " Shorcuts
 nmap <leader>o :Ex<CR>
@@ -143,6 +146,7 @@ nnoremap <leader>gb :Git blame<CR>
 
 " FZF
 nmap <leader>t :Files<CR>
+nmap <leader>b :Buffers<CR>
 nmap <leader>f :Rg<CR>
 let g:fzf_layout = { 'down': '~20%' }
 " Use ripgrep

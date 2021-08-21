@@ -16,6 +16,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export LANG=en_US.UTF-8
 export EDITOR='vim'
+export MANPAGER="vim -M +MANPAGER -"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -45,7 +46,15 @@ alias gitf='git fetch'
 alias gitl='git log'
 alias gitp='git pull'
 alias gits='git status'
+alias gitsu='git status -uno'
 alias gitup='git pull && git rpo && git prune'
+
+git-https() {
+    git remote set-url origin https://github.com/$(git remote get-url origin | sed 's/https:\/\/github.com\///' | sed 's/git@github.com://')
+}
+git-ssh() {
+    git remote set-url origin git@github.com:$(git remote get-url origin | sed 's/https:\/\/github.com\///' | sed 's/git@github.com://')
+}
 
 # npm
 alias npmls='npm list --depth=0 2>/dev/null'
@@ -107,7 +116,7 @@ setopt NO_CASE_GLOB
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
-HISTSIZE=10000000
+HISTSIZE=900000000
 SAVEHIST=$HISTSIZE
 
 HYPHEN_INSENSITIVE="true"
