@@ -83,3 +83,5 @@
     defaultBranch = master
 [merge]
 	tool = vimdiff
+[advice]
+	skippedCherryPicks = false
