@@ -1,7 +1,7 @@
 # zmodload zsh/zprof
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZSH="/Users/dliu/.oh-my-zsh"
+export ZSH="/Users/danielliu/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 DISABLE_MAGIC_FUNCTIONS=true
