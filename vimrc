@@ -30,6 +30,7 @@ Plug 'elzr/vim-json'
 Plug 'othree/yajs'
 Plug 'mxw/vim-jsx'
 Plug 'keith/swift.vim'
+Plug 'jparise/vim-graphql'
 
 Plug 'psf/black', { 'for': 'python' }
 
@@ -101,6 +102,7 @@ autocmd BufNewFile,BufRead *.arc* set syntax=json
 autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy
 autocmd BufNewFile,BufRead *.toml set syntax=cfg
+autocmd BufNewFile,BufRead .env.local set syntax=sh
 
 let g:vim_json_syntax_conceal=0
 

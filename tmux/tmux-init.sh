@@ -23,19 +23,22 @@ tmux new-session -d -s $workb -n "gql-pg"
 tmux new-window -t $workb:1 -n server
 tmux new-window -t $workb:2 -n hasura
 tmux new-window -t $workb:3 -n code
-tmux new-window -t $workb:4 -n notes
+tmux new-window -t $workb:4 -n code2
+tmux new-window -t $workb:5 -n notes
 
 tmux send-keys -t $workb:0 "source ~/.zshrc.work" C-m
 tmux send-keys -t $workb:1 "source ~/.zshrc.work" C-m
 tmux send-keys -t $workb:2 "source ~/.zshrc.work" C-m
 tmux send-keys -t $workb:3 "source ~/.zshrc.work" C-m
 tmux send-keys -t $workb:4 "source ~/.zshrc.work" C-m
+tmux send-keys -t $workb:5 "source ~/.zshrc.work" C-m
 
 tmux send-keys -t $workb:0 "cdfb" C-m
 tmux send-keys -t $workb:1 "cdfbs" C-m
 tmux send-keys -t $workb:2 "cdfb" C-m
 tmux send-keys -t $workb:3 "cdfb" C-m
-tmux send-keys -t $workb:4 "cdfnotes" C-m
+tmux send-keys -t $workb:4 "cdfb && cd packages/server" C-m
+tmux send-keys -t $workb:5 "cdfnotes" C-m
 
 # frontend
 tmux new-session -d -s $workf -n serve

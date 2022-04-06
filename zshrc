@@ -25,6 +25,7 @@ alias zshconf="vim ~/.zshrc"
 alias zshhist="vim ~/.zsh_history"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshlocal="vim $HOME/.zshrc.local"
+alias zshwork="vim $HOME/.zshrc.work"
 alias vimrc="vim $HOME/.vimrc"
 alias gitconf="vim $HOME/.gitconfig"
 
@@ -136,3 +137,5 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # zprof
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

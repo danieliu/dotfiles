@@ -58,7 +58,7 @@
     sl = "stash list"
     sp = "!git stash pop stash@{$1} #"
     ss = "stash save"
-    stat = "show --stat --oneline"
+    stat = "log -1 --stat --oneline"
     l = "log"
     lk = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s' --date=relative"
     lj = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(30)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s'"
@@ -77,6 +77,7 @@
 [pager]
     branch = false
     stash = false
+    stat = false
 [pull]
     rebase = false
 [init]
