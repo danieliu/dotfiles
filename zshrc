@@ -84,8 +84,9 @@ alias dcoup="docker-compose up -d"
 alias dcostop="docker-compose stop"
 alias dcops="docker-compose ps"
 alias dcodown="docker-compose down"
-alias dils="docker image ls"
-alias dcls="docker container ls"
+alias dils="docker image ls -a"
+alias dcls="docker container ls -a"
+alias dvls="docker volume ls"
 dstop() {
     docker stop `docker ps -q`
 }

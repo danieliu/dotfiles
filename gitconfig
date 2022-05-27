@@ -51,13 +51,13 @@
     rhh = "reset HEAD^ --hard"
     rpo = "remote prune origin"
     refs = "for-each-ref --format='%(authorname) %09 -%(refname)'"
-    sa = "!git stash apply stash@{${1:-0}} #"
-    sd = "!git stash drop stash@{${1:-0}} #"
+    sa = "!git --no-pager stash apply stash@{${1:-0}} #"
+    sd = "!git --no-pager stash drop stash@{${1:-0}} #"
     sv = "!git stash show stash@{${1:-0}} -v #"
-    svs = "!git stash show stash@{${1:-0}} -v --stat #"
-    sl = "stash list"
+    svs = "!git --no-pager stash show stash@{${1:-0}} -v --stat #"
+    sl = "!git --no-pager stash list"
     sp = "!git stash pop stash@{$1} #"
-    ss = "stash save"
+    ss = "!git --no-pager stash save"
     stat = "log -1 --stat --oneline"
     l = "log"
     lk = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s' --date=relative"
@@ -76,7 +76,7 @@
     tags = "log --date-order --tags --simplify-by-decoration --pretty='format:%C(green)%ai %C(red)%h %C(auto)%D' --date=short"
 [pager]
     branch = false
-    stash = false
+    stash = true
     stat = false
 [pull]
     rebase = false
