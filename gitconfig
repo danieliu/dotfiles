@@ -11,6 +11,10 @@
     paging = always
     side-by-side = true
     syntax-theme = gruvbox-dark
+    map-styles = \
+        bold purple => syntax "#6e2158", \
+        bold cyan => syntax "#1b6e66"
+
 [alias]
     adda = "add -A"
     addu = "add -u"
@@ -25,6 +29,7 @@
     bp = "branch -u"
     bu = "branch --unset-upstream"
     bv = "branch -vv"
+    c = "commit"
     cam = "commit -am"
     cm = "commit -m"
     co = "checkout"
@@ -39,9 +44,9 @@
     files = "diff --name-only HEAD^..HEAD"
     ftf = "fetch --tags --force"
     mf = "merge --ff-only"
-    puo = "push -u origin"
-    prbiom = "pull --rebase=interactive origin/master"
-    prbiod = "pull --rebase=interactive origin/develop"
+    puo = "push -u origin @"
+    prbiom = "pull --rebase=interactive origin master"
+    prbiod = "pull --rebase=interactive origin develop"
     rba = "rebase --abort"
     rbc = "rebase --continue"
     rbi = "rebase -i"
@@ -60,12 +65,13 @@
     ss = "!git --no-pager stash save"
     stat = "log -1 --stat --oneline"
     l = "log"
-    lk = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s' --date=relative"
+    lf = "log --follow"
+    lg = "!git lg1"
     lj = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(30)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s'"
+    lk = "log --pretty=format:'%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto)%d %C(auto,reset)%s' --date=relative"
     lm = "!git log --author=\"<$(git config user.email)>\""
     lp = "log -p"
     ls = "log --stat"
-    lg = "!git lg1"
     lg1 = "!git lg1-specific --all"
     lg2 = "!git lg2-specific --all"
     lg3 = "!git lg3-specific --all"
@@ -83,6 +89,8 @@
 [init]
     defaultBranch = master
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [advice]
-	skippedCherryPicks = false
+    skippedCherryPicks = false
+[diff]
+    colorMoved = default

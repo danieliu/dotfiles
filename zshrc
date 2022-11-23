@@ -18,6 +18,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export MANPAGER="vim -M +MANPAGER -"
 
+export LESS='-Ri --incsearch'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -38,6 +40,10 @@ fzfo() {
     [[ -n "$file" ]] && vim "$file"
 }
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules" --glob "!.yalc"'
+export FZF_DEFAULT_OPTS="
+--bind 'ctrl-y:execute-silent(echo {} | pbcopy)'
+--bind 'ctrl-alt-y:execute(readlink -f {} | pbcopy)'
+"
 
 # git
 alias gitb='git branch'

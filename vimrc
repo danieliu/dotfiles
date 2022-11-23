@@ -96,6 +96,7 @@ highlight ColorColumn guibg=#23282C  " Ruler color
 highlight ExtraWhitespace guibg=red  " Trailing whitespace color
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 autocmd FileType go setlocal noexpandtab
 autocmd BufNewFile,BufRead *.sls set syntax=yaml
 autocmd BufNewFile,BufRead *.arc* set syntax=json
