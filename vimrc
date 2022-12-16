@@ -104,6 +104,7 @@ autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy
 autocmd BufNewFile,BufRead *.toml set syntax=cfg
 autocmd BufNewFile,BufRead .env.local set syntax=sh
+autocmd FileType gitcommit setlocal tw=80
 
 let g:vim_json_syntax_conceal=0
 
