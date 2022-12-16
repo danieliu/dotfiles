@@ -50,8 +50,8 @@ function symlink {
 symlink bashrc ~/.bashrc
 symlink zshrc ~/.zshrc
 symlink bash_profile ~/.bash_profile
-symlink gitconfig ~/.gitconfig
-symlink gitignore ~/.gitignore_global
+symlink git/gitconfig ~/.gitconfig
+symlink git/gitignore ~/.gitignore_global
 symlink git/gitmessage ~/.gitmessage
 symlink init.vim ~/.config/nvim/init.vim
 symlink inputrc ~/.inputrc
