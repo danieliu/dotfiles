@@ -32,6 +32,7 @@
     bv = "branch -vv"
     c = "commit"
     cam = "commit -am"
+    camv = "commit --no-verify -am"
     cfd = "clean -fd"
     cfdn = "clean -fdn"
     cm = "commit -m"
@@ -64,6 +65,7 @@
     mf = "merge --ff-only"
     prbiod = "pull --rebase=interactive origin develop"
     prbiom = "pull --rebase=interactive origin master"
+    po = "push origin"
     puo = "push -u origin @"
     rba = "rebase --abort"
     rbc = "rebase --continue"
@@ -83,6 +85,7 @@
     sv = "!git stash show stash@{${1:-0}} -v #"
     svs = "!git --no-pager stash show stash@{${1:-0}} -v --stat #"
     tags = "log --date-order --tags --simplify-by-decoration --pretty='format:%C(green)%ai %C(red)%h %C(auto)%D' --date=short"
+    taglist = "for-each-ref --color=always --format='%(color:bold blue)%(refname)%(color:reset) %(color:bold green)%(taggerdate)%(color:reset) %(color:bold cyan)%(taggername) %(taggeremail)%(color:reset) %09 %(subject)' refs/tags --sort=taggerdate"
 [pager]
     branch = false
     stash = true
@@ -97,3 +100,5 @@
     skippedCherryPicks = false
 [diff]
     colorMoved = default
+[commit]
+    template = ~/.gitmessage
