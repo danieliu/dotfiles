@@ -21,7 +21,7 @@ workf="fractional-f"
 # backend
 tmux new-session -d -s $workb -n "gql-pg"
 tmux new-window -t $workb:1 -n server
-tmux new-window -t $workb:2 -n hasura
+tmux new-window -t $workb:2 -n gql
 tmux new-window -t $workb:3 -n code
 tmux new-window -t $workb:4 -n code2
 tmux new-window -t $workb:5 -n code3

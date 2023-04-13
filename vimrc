@@ -104,6 +104,10 @@ autocmd BufNewFile,BufRead *.coffee set syntax=javascript
 autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy
 autocmd BufNewFile,BufRead *.toml set syntax=cfg
 autocmd BufNewFile,BufRead .env.local set syntax=sh
+
+" prevent newlines/returns unless super long to remind
+" otherwise github commit message when merging ends up with weird line breaks
+" 2023-02-07 just set it back to 80 and give control back to vim for newlines
 autocmd FileType gitcommit setlocal tw=80
 
 let g:vim_json_syntax_conceal=0

@@ -4,6 +4,7 @@
     editor = vim
     pager = delta
     excludesfile = ~/.gitignore_global
+    ignorecase = false
 [delta]
     file-modified-label = modified:
     hunk-header-style = omit
@@ -21,7 +22,11 @@
     addu = "add -u"
     alias = "! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /"
     amend = "commit --amend"
+    amends = "commit --amend --no-edit"
     amenda = "commit -a --amend"
+    amendas = "commit -a --amend --no-edit"
+    amendasv = "commit -a --amend --no-edit --no-verify"
+    apf = "!git commit -a --amend --no-edit && git push -f"
     b = "branch"
     bd = "branch -D"
     bm = "branch -m"
@@ -36,6 +41,7 @@
     cfd = "clean -fd"
     cfdn = "clean -fdn"
     cm = "commit -m"
+    cmv = "commit --no-verify -m"
     co = "checkout"
     cob = "checkout -b"
     cod = "checkout develop"
@@ -63,6 +69,7 @@
     lp = "log -p"
     ls = "log --stat"
     mf = "merge --ff-only"
+    pf = "push -f"
     prbiod = "pull --rebase=interactive origin develop"
     prbiom = "pull --rebase=interactive origin master"
     po = "push origin"
