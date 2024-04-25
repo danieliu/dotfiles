@@ -50,14 +50,17 @@ tmux send-keys -t $workb:7 "cdfb" C-m
 tmux new-session -d -s $workf -n serve
 tmux new-window -t $workf:1 -n code
 tmux new-window -t $workf:2 -n code2
+tmux new-window -t $workf:3 -n code3
 
 tmux send-keys -t $workf:0 "source ~/.zshrc.work" C-m
 tmux send-keys -t $workf:1 "source ~/.zshrc.work" C-m
 tmux send-keys -t $workf:2 "source ~/.zshrc.work" C-m
+tmux send-keys -t $workf:3 "source ~/.zshrc.work" C-m
 
-tmux send-keys -t $workf:0 "cdff" C-m
-tmux send-keys -t $workf:1 "cdff" C-m
-tmux send-keys -t $workf:2 "cdff" C-m
+tmux send-keys -t $workf:0 "cdfff" C-m
+tmux send-keys -t $workf:1 "cdfff" C-m
+tmux send-keys -t $workf:2 "cdfff" C-m
+tmux send-keys -t $workf:3 "cdfff" C-m
 
 tmux select-window -t $session:0
 

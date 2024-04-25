@@ -146,3 +146,9 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 # zprof
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Created by `pipx` on 2023-08-09 22:39:24
+export PATH="$PATH:/Users/danielliu/.local/bin"
+
+# Created by `pipx` on 2023-10-31 21:43:52
+export PATH="$PATH:/Users/danielliu/Library/Python/3.11/bin"

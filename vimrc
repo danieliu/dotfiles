@@ -108,7 +108,9 @@ autocmd BufNewFile,BufRead .env.local set syntax=sh
 " prevent newlines/returns unless super long to remind
 " otherwise github commit message when merging ends up with weird line breaks
 " 2023-02-07 just set it back to 80 and give control back to vim for newlines
-autocmd FileType gitcommit setlocal tw=80
+" 2023-08-18 had set this to 88 cuz 80 was too small; github is dumb still and
+" no configuration available for textwidths on PRs, so setting to 70 now
+autocmd FileType gitcommit setlocal tw=70
 
 let g:vim_json_syntax_conceal=0
 
