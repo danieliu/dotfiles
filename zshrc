@@ -25,6 +25,7 @@ export LESS='-Ri --incsearch'
 
 alias zshconf="vim ~/.zshrc"
 alias zshhist="vim ~/.zsh_history"
+alias zshhistw="vim ~/.zsh_history.work"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshlocal="vim $HOME/.zshrc.local"
 alias zshwork="vim $HOME/.zshrc.work"
@@ -105,6 +106,10 @@ alias sshconf='vim $HOME/.ssh/config'
 alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 
+# vscode
+alias vscodesave='. $HOME/dotfiles/bin/vscode-extensions-save'
+alias vscodeinstall='. $HOME/dotfiles/bin/vscode-extensions-install'
+
 # opts
 # setopt -s HISTAPPEND >/dev/null 2>&1  # from bash
 setopt CORRECT
@@ -146,9 +151,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 # zprof
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# Created by `pipx` on 2023-08-09 22:39:24
-export PATH="$PATH:/Users/danielliu/.local/bin"
 
 # Created by `pipx` on 2023-10-31 21:43:52
 export PATH="$PATH:/Users/danielliu/Library/Python/3.11/bin"

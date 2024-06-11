@@ -17,6 +17,7 @@ tmux send-keys -t $session:4 "cdc" C-m
 # work
 workb="fractional-b"
 workf="fractional-f"
+workm="fractional-m"
 
 # backend
 tmux new-session -d -s $workb -n "gql-pg"
@@ -61,6 +62,16 @@ tmux send-keys -t $workf:0 "cdfff" C-m
 tmux send-keys -t $workf:1 "cdfff" C-m
 tmux send-keys -t $workf:2 "cdfff" C-m
 tmux send-keys -t $workf:3 "cdfff" C-m
+
+# mobile
+tmux new-session -d -s $workm -n mobile
+tmux new-window -t $workm:1 -n code
+
+tmux send-keys -t $workm:0 "source ~/.zshrc.work" C-m
+tmux send-keys -t $workm:1 "source ~/.zshrc.work" C-m
+
+tmux send-keys -t $workm:0 "cdfm" C-m
+tmux send-keys -t $workm:1 "cdfm" C-m
 
 tmux select-window -t $session:0
 

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+INSTALLED_EXTENSIONS=$(code --list-extensions --show-versions)
+
+cat $HOME/dotfiles/vscode/vscode-extensions.txt | while read extension_name
+do
+    if [[ $INSTALLED_EXTENSIONS == *"$extension_name"* ]]; then
+        echo "✅ Extension $extension_name already installed."
+        continue
+    fi
+
+    # TODO: create array of extensions to install then run once
+    code --install-extension "$extension_name"
+    if [ $? -eq 0 ]; then
+        echo "✅ Extension $extension_name installed successfully."
+    else
+        echo "❌ Extension $extension_name installation failed."
+    fi
+done

@@ -1,0 +1,2 @@
+#!/bin/sh
+code --list-extensions --show-versions > "$HOME/dotfiles/vscode/vscode-extensions.txt"
