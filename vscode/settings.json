@@ -1,0 +1,178 @@
+{
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": true,
+  //   "source.organizeImports": true
+  // },
+  // "editor.codeActionsOnSave": [
+  //   "source.organizeImports",
+  //   "source.fixAll.prettier"
+  // ],
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  // 2023-10-16: temporary to retain old behavior with new updates; https://github.com/jdinhify/vscode-theme-gruvbox/issues/82
+  // "editor.semanticHighlighting.enabled": false,
+  "workbench.editor.labelFormat": "short",
+  "python.defaultInterpreterPath": "/Users/danielliu/.pyenv/versions/3.10.1/bin/python",
+
+  // Using the light mode
+  "indentRainbow.indicatorStyle": "light",
+  // we use a simple 1 pixel wide line
+  "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  // the same colors as above but more visible
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"
+  ],
+
+  "vim.leader": ",",
+  "vim.foldfix": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "t"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
+          "args": []
+        }
+      ]
+    },
+    // go to source definition
+    {
+      "before": ["g", "D"],
+      "commands": ["typescript.goToSourceDefinition"]
+    },
+    // splits
+    {
+      "before": ["<leader>", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": [":split"]
+    },
+    // split navigation
+    {
+      "before": ["ctrl+h"],
+      "after": ["ctrl+w", "h"]
+    },
+    {
+      "before": ["ctrl+j"],
+      "after": ["ctrl+w", "j"]
+    },
+    {
+      "before": ["ctrl+k"],
+      "after": ["ctrl+w", "k"]
+    },
+    {
+      "before": ["ctrl+l"],
+      "after": ["ctrl+w", "l"]
+    },
+    // {
+    //   "before": [""],
+    //   "commands": ["workbench.action.moveEditorToNextGroup"]
+    // },
+    // {
+    //   "before": ["ctrl+shift+h"],
+    //   "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    // },
+    // git
+    {
+      "before": ["<leader>", "g", "b"],
+      "commands": ["gitlens.toggleFileBlame"]
+    },
+    // qol
+    {
+      "before": ["<leader>", "c"],
+      "commands": [":close"]
+    },
+    {
+      "before": ["ctrl+e"],
+      "after": ["3", "ctrl+e"]
+    },
+    {
+      "before": ["ctrl+y"],
+      "after": ["3", "ctrl+y"]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.view.search"]
+    }
+  ],
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.format": "${id} ${author|10} ${agoOrDate|14}",
+  "gitlens.blame.compact": true,
+  "gitlens.hovers.enabled": false,
+  "editor.cursorSurroundingLines": 3,
+  "editor.wordWrap": "off",
+  "editor.rulers": [80, 88, 100, 120],
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "search.smartCase": true,
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": false,
+  "files.associations": {
+    ".env": "ini",
+    ".env.local": "ini",
+    ".env.test": "ini"
+  },
+  "explorer.confirmDelete": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "jest.autoRun": "off",
+  "jest.autoRevealOutput": "off",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "openInGitHub.defaultBranch": "master",
+  "openInGitHub.defaultRemote": "origin",
+  "[scss]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "window.zoomLevel": -1,
+  "typescript.tsserver.log": "off",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.configPath": ".prettierrc",
+  "prettier.trailingComma": "all",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false
+}

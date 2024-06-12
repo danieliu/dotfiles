@@ -24,16 +24,16 @@ function symlink {
     echo -n "       Linking $target..."
 
     # Don't overwrite non-symlinked configs
-    if [ -f $target ] && [ ! -L $target ]; then
+    if [ -f "$target" ] && [ ! -L "$target" ]; then
         # target exists, is regular file && not a symlink
         exists "file" $target
         return 1
     fi
 
     # Don't nest symlinks
-    if [ -d $target ]; then
+    if [ -d "$target" ]; then
         # target exists and is a directory
-        if [ -L $target ]; then
+        if [ -L "$target" ]; then
             # target exists and is a symlink
             rm $target
         else
@@ -43,7 +43,7 @@ function symlink {
         fi
     fi
 
-    ln -fs $(pwd)/$src $target
+    ln -fs $(pwd)/$src "$target"
     echo_okay
 }
 
@@ -61,3 +61,5 @@ symlink vimrc ~/.ideavimrc
 symlink vim ~/.vim
 symlink tmux.conf ~/.tmux.conf
 symlink ctags ~/.ctags
+symlink vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+symlink vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json

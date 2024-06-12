@@ -16,7 +16,8 @@ ms-python.isort@2023.10.1
 ms-python.python@2024.8.0
 ms-python.vscode-pylance@2024.6.1
 ms-vscode.makefile-tools@0.9.10
-ms-vscode.vscode-typescript-next@5.5.20240505
+ms-vscode.vscode-typescript-next@5.6.20240611
+oderwat.indent-rainbow@8.3.1
 sysoev.vscode-open-in-github@1.18.0
 vscodevim.vim@1.27.3
 wayou.vscode-todo-highlight@1.0.5
