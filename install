@@ -56,6 +56,7 @@ symlink git/gitmessage ~/.gitmessage
 symlink init.vim ~/.config/nvim/init.vim
 symlink inputrc ~/.inputrc
 symlink lein ~/.lein
+symlink psqlrc ~/.psqlrc
 symlink vimrc ~/.vimrc
 symlink vimrc ~/.ideavimrc
 symlink vim ~/.vim

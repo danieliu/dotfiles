@@ -20,9 +20,9 @@ workf="fractional-f"
 workm="fractional-m"
 
 # backend
-tmux new-session -d -s $workb -n "gql-pg"
+tmux new-session -d -s $workb -n "gql"
 tmux new-window -t $workb:1 -n server
-tmux new-window -t $workb:2 -n gql
+tmux new-window -t $workb:2 -n worker
 tmux new-window -t $workb:3 -n code
 tmux new-window -t $workb:4 -n code2
 tmux new-window -t $workb:5 -n code3
@@ -40,10 +40,10 @@ tmux send-keys -t $workb:7 "source ~/.zshrc.work" C-m
 
 tmux send-keys -t $workb:0 "cdfb" C-m
 tmux send-keys -t $workb:1 "cdfbs" C-m
-tmux send-keys -t $workb:2 "cdfb" C-m
-tmux send-keys -t $workb:3 "cdfb && cd packages/server" C-m
-tmux send-keys -t $workb:4 "cdfb && cd packages/server" C-m
-tmux send-keys -t $workb:5 "cdfb && cd packages/server" C-m
+tmux send-keys -t $workb:2 "cdfbs" C-m
+tmux send-keys -t $workb:3 "cdfbs" C-m
+tmux send-keys -t $workb:4 "cdfbs" C-m
+tmux send-keys -t $workb:5 "cdfbs" C-m
 tmux send-keys -t $workb:6 "cdfnotes" C-m
 tmux send-keys -t $workb:7 "cdfb" C-m
 

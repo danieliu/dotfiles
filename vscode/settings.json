@@ -146,9 +146,11 @@
   "jest.autoRun": "off",
   "jest.autoRevealOutput": "off",
   "[json]": {
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {

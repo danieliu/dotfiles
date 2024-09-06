@@ -1,0 +1,4 @@
+\set HISTFILE ~/.psql_history- :DBNAME
+
+\pset pager off
+\pset null '(null)'

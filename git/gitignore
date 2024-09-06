@@ -8,3 +8,4 @@ yalc.lock
 .venv
 .idea
 *.egg-info
+.git-blame-ignore-revs
