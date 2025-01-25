@@ -170,11 +170,27 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.configPath": ".prettierrc",
+  // "prettier.configPath": ".prettierrc",
   "prettier.trailingComma": "all",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "playwright.reuseBrowser": true,
-  "playwright.showTrace": false
+  "playwright.showTrace": false,
+
+  "eslint.workingDirectories": [
+    "./",
+    "./packages/server",
+    "./packages/frontend"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "typescript",
+    "typescriptreact"
+  ],
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  }
 }

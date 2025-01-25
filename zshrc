@@ -134,7 +134,8 @@ SAVEHIST=$HISTSIZE
 
 HYPHEN_INSENSITIVE="true"
 
-autoload bashcompinit && bashcompinit
+# autoload bashcompinit && bashcompinit
+# autoload -Uz compinit && compinit
 
 NEWLINE=$'\n'
 PROMPT='%{$fg[blue]%}[%*]%{$reset_color%} %{$fg_bold[cyan]%}%~%{$reset_color%} $(git_prompt_info)$NEWLINE'
@@ -154,3 +155,18 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Created by `pipx` on 2023-10-31 21:43:52
 export PATH="$PATH:/Users/danielliu/Library/Python/3.11/bin"
+
+# Delete brew's objectively worse git completion
+remove_conflicting_git_completions() {
+    local git_completion_bash="$HOMEBREW_PREFIX/share/zsh/site-functions/git-completion.bash"
+    local git_completion_zsh="$HOMEBREW_PREFIX/share/zsh/site-functions/_git"
+    [ -e "$git_completion_bash" ] && rm "$git_completion_bash"
+    [ -e "$git_completion_zsh" ] && rm "$git_completion_zsh"
+}
+# This needs to run every time since brew sometimes brings those files back
+remove_conflicting_git_completions
+
+# Add Homebrew's site functions to fpath (minus git, because that causes conflicts)
+# This will give you autocomplete for _other_ things you installed
+# from brew (like `just`, or `exa`, or `k6`)
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
