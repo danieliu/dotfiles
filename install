@@ -57,6 +57,8 @@ symlink init.vim ~/.config/nvim/init.vim
 symlink inputrc ~/.inputrc
 symlink lein ~/.lein
 symlink psqlrc ~/.psqlrc
+symlink psql-fzf ~/.psql-fzf
+symlink psql-fzf-pager ~/.psql-fzf-pager
 symlink editrc ~/.editrc
 symlink vimrc ~/.vimrc
 symlink vimrc ~/.ideavimrc
