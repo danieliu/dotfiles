@@ -1,8 +1,10 @@
 {
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll": true,
-  //   "source.organizeImports": true
-  // },
+  "editor.codeActionsOnSave": {
+    // "source.fixAll": true,
+    // "source.organizeImports": true
+    // "source.fixAll.biome": "explicit",
+    // "source.organizeImports.biome": "explicit"
+  },
   // "editor.codeActionsOnSave": [
   //   "source.organizeImports",
   //   "source.fixAll.prettier"
@@ -10,6 +12,13 @@
   "workbench.colorTheme": "Gruvbox Dark Hard",
   // 2023-10-16: temporary to retain old behavior with new updates; https://github.com/jdinhify/vscode-theme-gruvbox/issues/82
   // "editor.semanticHighlighting.enabled": false,
+  "editor.semanticTokenColorCustomizations": {
+    // "[Gruvbox Dark Hard]": {
+    //   // use the same variable and function colors for semantic syntax highlighting `on` and `off`
+    //   "rules": { "variable": "#ebdbb2", "function": "#fabd2f" }
+    //   // "rules": { "variable": "#83a598", "function": "#fabd2f" }
+    // }
+  },
   "workbench.editor.labelFormat": "short",
   "python.defaultInterpreterPath": "/Users/danielliu/.pyenv/versions/3.10.1/bin/python",
 
@@ -29,6 +38,7 @@
   "vim.foldfix": true,
   "vim.incsearch": true,
   "vim.hlsearch": true,
+  "vim.textwidth": 88,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -137,11 +147,11 @@
   },
   "[typescript]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[typescriptreact]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "jest.autoRun": "off",
   "jest.autoRevealOutput": "off",
@@ -153,28 +163,31 @@
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascriptreact]": {
-    // "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "openInGitHub.defaultBranch": "master",
-  "openInGitHub.defaultRemote": "origin",
+  // "[javascriptreact]": {
+  //   "editor.defaultFormatter": "biomejs.biome"
+  // },
   "[scss]": {
-    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.defaultFormatter": "biomejs.biome"
   },
   "[python]": {
     "editor.formatOnType": true
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "openInGitHub.defaultBranch": "master",
+  "openInGitHub.defaultRemote": "origin",
   "git.openRepositoryInParentFolders": "never",
   "window.zoomLevel": -1,
   "typescript.tsserver.log": "off",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   // "prettier.configPath": ".prettierrc",
   "prettier.trailingComma": "all",
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "playwright.reuseBrowser": true,
   "playwright.showTrace": false,
 
@@ -190,7 +203,24 @@
     "typescript",
     "typescriptreact"
   ],
-  "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  }
+  "gruvboxMaterial.darkContrast": "hard",
+  "colorize.include": [
+    "**/style*.css.ts",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "**/*.styl"
+  ],
+  "colorize.decoration_type": "dot",
+  "gitlens.launchpad.indicator.enabled": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
+  "js/ts.experimental.useTsgo": true
 }

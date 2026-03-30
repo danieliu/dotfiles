@@ -9,3 +9,5 @@ yalc.lock
 .idea
 *.egg-info
 .git-blame-ignore-revs
+.claude
+devdocs/
