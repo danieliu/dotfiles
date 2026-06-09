@@ -40,8 +40,8 @@ tmux send-keys -t $workb:7 "source ~/.zshrc.work" C-m
 
 tmux send-keys -t $workb:0 "cdfb" C-m
 tmux send-keys -t $workb:1 "cdfbs" C-m
-tmux send-keys -t $workb:2 "cdfb" C-m
-tmux send-keys -t $workb:3 "cdfb" C-m
+tmux send-keys -t $workb:2 "cdfbs" C-m
+tmux send-keys -t $workb:3 "cdfbs" C-m
 tmux send-keys -t $workb:4 "cdfbs" C-m
 tmux send-keys -t $workb:5 "cdfbs" C-m
 tmux send-keys -t $workb:6 "cdfnotes" C-m
@@ -59,7 +59,7 @@ tmux send-keys -t $workf:2 "source ~/.zshrc.work" C-m
 tmux send-keys -t $workf:3 "source ~/.zshrc.work" C-m
 
 tmux send-keys -t $workf:0 "cdfff" C-m
-tmux send-keys -t $workf:1 "cdff" C-m
+tmux send-keys -t $workf:1 "cdfff" C-m
 tmux send-keys -t $workf:2 "cdfff" C-m
 tmux send-keys -t $workf:3 "cdfff" C-m
 

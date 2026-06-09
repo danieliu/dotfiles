@@ -56,12 +56,36 @@ alias gitp='git pull'
 alias gits='git status'
 alias gitsu='git status -uno'
 alias gitup='git pull && git rpo && git prune'
+alias gitfroh='gitf && git roh'
 
 git-https() {
     git remote set-url origin https://github.com/$(git remote get-url origin | sed 's/https:\/\/github.com\///' | sed 's/git@github.com://')
 }
 git-ssh() {
     git remote set-url origin git@github.com:$(git remote get-url origin | sed 's/https:\/\/github.com\///' | sed 's/git@github.com://')
+}
+
+# git worktrees
+# Jump to a worktree by branch name, or fuzzy-pick with fzf if no arg given
+# Passing a partial name (e.g. wcd claude) pre-fills the fzf search
+# Usage: wcd claude/feature-auth
+#        wcd claude
+#        wcd
+gitwtcd() {
+  local selected=$(
+    git worktree list \
+      | fzf \
+          --prompt="worktree> " \
+          --preview="git -C {1} log --oneline --color=always -10" \
+          --preview-window=right:50% \
+          --ansi \
+          --height=40% \
+          --reverse \
+          --border \
+          --query="${1:-}" \
+      | awk '{print $1}'
+  )
+  [ -n "$selected" ] && cd "$selected"
 }
 
 # npm

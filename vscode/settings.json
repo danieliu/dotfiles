@@ -31,7 +31,7 @@
     "rgba(255,255,64,0.3)",
     "rgba(127,255,127,0.3)",
     "rgba(255,127,255,0.3)",
-    "rgba(79,236,236,0.3)"
+    "rgba(79,236,236,0.3)",
   ],
 
   "vim.leader": ",",
@@ -42,8 +42,8 @@
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
+      "after": ["<Esc>"],
+    },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -52,40 +52,40 @@
       "commands": [
         {
           "command": "workbench.action.quickOpen",
-          "args": []
-        }
-      ]
+          "args": [],
+        },
+      ],
     },
     // go to source definition
     {
       "before": ["g", "D"],
-      "commands": ["typescript.goToSourceDefinition"]
+      "commands": ["typescript.goToSourceDefinition"],
     },
     // splits
     {
       "before": ["<leader>", "v"],
-      "commands": [":vsplit"]
+      "commands": [":vsplit"],
     },
     {
       "before": ["<leader>", "s"],
-      "commands": [":split"]
+      "commands": [":split"],
     },
     // split navigation
     {
       "before": ["ctrl+h"],
-      "after": ["ctrl+w", "h"]
+      "after": ["ctrl+w", "h"],
     },
     {
       "before": ["ctrl+j"],
-      "after": ["ctrl+w", "j"]
+      "after": ["ctrl+w", "j"],
     },
     {
       "before": ["ctrl+k"],
-      "after": ["ctrl+w", "k"]
+      "after": ["ctrl+w", "k"],
     },
     {
       "before": ["ctrl+l"],
-      "after": ["ctrl+w", "l"]
+      "after": ["ctrl+w", "l"],
     },
     // {
     //   "before": [""],
@@ -98,29 +98,29 @@
     // git
     {
       "before": ["<leader>", "g", "b"],
-      "commands": ["gitlens.toggleFileBlame"]
+      "commands": ["gitlens.toggleFileBlame"],
     },
     // qol
     {
       "before": ["<leader>", "c"],
-      "commands": [":close"]
+      "commands": [":close"],
     },
     {
       "before": ["ctrl+e"],
-      "after": ["3", "ctrl+e"]
+      "after": ["3", "ctrl+e"],
     },
     {
       "before": ["ctrl+y"],
-      "after": ["3", "ctrl+y"]
+      "after": ["3", "ctrl+y"],
     },
     {
       "before": ["<leader>", "o"],
-      "commands": ["workbench.view.explorer"]
+      "commands": ["workbench.view.explorer"],
     },
     {
       "before": ["<leader>", "f"],
-      "commands": ["workbench.view.search"]
-    }
+      "commands": ["workbench.view.search"],
+    },
   ],
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.blame.avatars": false,
@@ -138,30 +138,30 @@
   "files.associations": {
     ".env": "ini",
     ".env.local": "ini",
-    ".env.test": "ini"
+    ".env.test": "ini",
   },
   "explorer.confirmDelete": false,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "[typescript]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[typescriptreact]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "jest.autoRun": "off",
   "jest.autoRevealOutput": "off",
   "[json]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   // "[javascriptreact]": {
   //   "editor.defaultFormatter": "biomejs.biome"
@@ -170,16 +170,16 @@
     // "editor.defaultFormatter": "biomejs.biome"
   },
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
   },
   "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[css]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers",
   },
   "openInGitHub.defaultBranch": "master",
   "openInGitHub.defaultRemote": "origin",
@@ -194,14 +194,14 @@
   "eslint.workingDirectories": [
     "./",
     "./packages/server",
-    "./packages/frontend"
+    "./packages/frontend",
   ],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "html",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
   ],
   "gruvboxMaterial.darkContrast": "hard",
   "colorize.include": [
@@ -210,7 +210,7 @@
     "**/*.scss",
     "**/*.sass",
     "**/*.less",
-    "**/*.styl"
+    "**/*.styl",
   ],
   "colorize.decoration_type": "dot",
   "gitlens.launchpad.indicator.enabled": false,
@@ -220,7 +220,7 @@
     "https://www.schemastore.org/": true,
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
-    "https://biomejs.dev": true
+    "https://biomejs.dev": true,
   },
-  "js/ts.experimental.useTsgo": true
+  "js/ts.experimental.useTsgo": true,
 }
